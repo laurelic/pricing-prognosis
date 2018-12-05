@@ -1,0 +1,54 @@
+body {
+    background-color: #f7f7f8;
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.intro-page {
+    background-image: url("../images/rawpixel-600792-unsplash.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    min-height: auto;
+    text-align: left;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    padding: 170px 15px;
+}
+
+#map-id {
+    /* position: absolute; */
+    height: calc(100vh - 10vh);
+    top: 80px;
+    bottom: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    display: block;
+  }
+
+.data-body {
+    padding-top: 50px;
+}
+
+#loader {
+    background: url("http://www.aveva.com/Images/ajax-loader.gif") no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* z-index: 2; */
+}
+
+#result h5 {
+	background: yellow;
+}
+

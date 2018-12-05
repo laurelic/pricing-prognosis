@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style>
+    #fig_el4920827772667477686684476176 {
+        display:none;
+    }
+    #fig_el396419172523007521298293729 {
+        display:none;
+    }
+    #fig_el396419171951403442731434291 {
+        display:none;
+    }
+    #fig_el396419172449225123433058695 {
+        display:none;
+    }
+    #fig_el39641917244923072604847215 {
+        display:none;
+    }
+    #fig_el396419171987780402059167320 {
+        display:none;
+    }
+    #fig_el396419171983483606960503111 {
+        display:none;
+    }
+    #fig_el396419172414064645437457381 {
+        display:none;
+    }
+    #fig_el39641917197132912821203707 {
+        display:none;
+    }
+    #fig_el396419172595773287058747006 {
+        display:none;
+    }
+</style>
+
+<div class="container-fluid mt-7 data-body">
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>What do people typically get charged?</h5>
+        </div> 
+    </div>
+    <div class="row">
+        <div class="col-12">
+            Find the Top 10 frequently recorded procedures in the menu below. Visualizations of the average Medicare charge vs average number of procedures per provider within each Hospital Referral Region can be accessed below.
+        </div>
+    </div>
+        <div class="col-md-10"></div>
+            <select class="custom-select" id="procedures" name="procedures">
+                <option value="" selected>Select procedure...</option>
+                <option value="drg158">SEPTICEMIA OR SEVERE SEPSIS W/O MV >96 HOURS W/O MCC</option>
+                <option value="drg122">SIMPLE PNEUMONIA & PLEURISY W MCC</option>
+                <option value="drg123">SIMPLE PNEUMONIA & PLEURISY W CC</option>
+                <option value="drg193">HEART FAILURE & SHOCK W MCC</option>
+                <option value="drg194">HEART FAILURE & SHOCK W CC</option>
+                <option value="drg261">ESOPHAGITIS, GASTROENT & MISC DIGEST DISORDERS W/O MCC</option>
+                <option value="drg310">MAJOR JOINT REPLACEMENT OR REATTACHMENT OF LOWER EXTREMITY W/O MCC</option>
+                <option value="drg440">KIDNEY & URINARY TRACT INFECTIONS W/O MCC</option>
+                <option value="drg517">SEPTICEMIA OR SEVERE SEPSIS W/O MV >96 HOURS W MCC</option>
+                <option value="drg518">SEPTICEMIA OR SEVERE SEPSIS W/O MV >96 HOURS W/O MCC</option>
+            </select>
+
+    <div id="fig_el4920827772667477686684476176"></div>
+    <div id="fig_el396419172523007521298293729"></div>
+    <div id="fig_el396419171951403442731434291"></div>
+    <div id="fig_el396419172449225123433058695"></div>
+    <div id="fig_el39641917244923072604847215"></div>
+    <div id="fig_el396419171987780402059167320"></div>
+    <div id="fig_el396419171983483606960503111"></div>
+    <div id="fig_el396419172414064645437457381"></div>
+    <div id="fig_el39641917197132912821203707"></div>
+    <div id="fig_el396419172595773287058747006"></div>
+
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg158.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg122.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg123.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg193.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg194.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg261.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg310.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg440.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg517.js')}}"></script>
+<script type="text/javascript" src="{{  url_for('static', filename='js/drg518.js')}}"></script>
+</div>
+
+<script>
+
+    var elem = document.getElementById("procedures");
+    elem.onchange = function(){
+        var drg158 = document.getElementById("fig_el4920827772667477686684476176");
+        var drg122 = document.getElementById("fig_el396419172523007521298293729");
+        var drg123 = document.getElementById("fig_el396419171951403442731434291");
+        var drg193 = document.getElementById("fig_el396419172449225123433058695");
+        var drg194 = document.getElementById("fig_el39641917244923072604847215");
+        var drg261 = document.getElementById("fig_el396419171987780402059167320");
+        var drg310 = document.getElementById("fig_el396419171983483606960503111");
+        var drg440 = document.getElementById("fig_el396419172414064645437457381");
+        var drg517 = document.getElementById
+        ("fig_el39641917197132912821203707");
+        var drg518 = document.getElementById
+        ("fig_el396419172595773287058747006");
+
+        drg158.style.display = (this.value === "drg158") ? "block":"none";
+        drg122.style.display = (this.value === "drg122") ? "block":"none";
+        drg123.style.display = (this.value === "drg123") ? "block":"none";
+        drg193.style.display = (this.value === "drg193") ? "block":"none";
+        drg194.style.display = (this.value === "drg194") ? "block":"none";
+        drg261.style.display = (this.value === "drg261") ? "block":"none";
+        drg310.style.display = (this.value === "drg310") ? "block":"none";
+        drg440.style.display = (this.value === "drg440") ? "block":"none";
+        drg517.style.display = (this.value === "drg517") ? "block":"none";
+        drg518.style.display = (this.value === "drg518") ? "block":"none";
+    };
+ 
+    </script>
+
+{% endblock %}
